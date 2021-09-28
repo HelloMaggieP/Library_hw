@@ -38,4 +38,15 @@ public class LibraryTest {
         library.removeBook();
         assertEquals(1, library.getStock());
     }
+
+    @Test
+    public void cantAddBookIfCapacityIsMax(){
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        assertEquals(5, library.getStock());
+    }
 }

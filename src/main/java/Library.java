@@ -7,7 +7,7 @@ public class Library {
 
     public Library(){
         this.stock = new ArrayList<>();
-        this.capacity = 10;
+        this.capacity = 5;
     }
 
     public int getStock() {
@@ -15,7 +15,8 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        this.stock.add(book);
+        if (this.stock.size() < this.capacity)
+            this.stock.add(book);
     }
 
     public void removeBook() {
