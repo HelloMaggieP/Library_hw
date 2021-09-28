@@ -24,4 +24,18 @@ public class LibraryTest {
     public void canGetStock(){
         assertEquals(0, library.getStock());
     }
+
+    @Test
+    public void canAddBook(){
+        library.addBook(book1);
+        assertEquals(1, library.getStock());
+    }
+
+    @Test
+    public void canRemoveBook(){
+        library.addBook(book1);
+        library.addBook(book2);
+        library.removeBook();
+        assertEquals(1, library.getStock());
+    }
 }

@@ -13,4 +13,12 @@ public class Library {
     public int getStock() {
         return this.stock.size();
     }
+
+    public void addBook(Book book) {
+        this.stock.add(book);
+    }
+
+    public void removeBook() {
+        this.stock.remove(0);
+    }
 }
